@@ -29,7 +29,7 @@ jobs:
           --all-extras
       - name: Install xvfb
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: sudo apt-get update && sudo apt-get install xvfb
+        run: sudo -S apt-get update && sudo -S apt-get install xvfb
         timeout-minutes: 1
         
       - name: Install google-chrome-for-testing
